@@ -16,7 +16,9 @@ def create(request):
         voter_id = request.POST.get('voter-id-input')
         vote = request.POST.get('vote-input')
         private_key = request.POST.get('private-key-input')
-
+        print(voter_id)
+        print(vote)
+        print(private_key)
         # Create ballot as string vector
         timestamp = datetime.datetime.now().timestamp()
         ballot = "{}|{}|{}".format(voter_id, vote, timestamp)
